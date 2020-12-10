@@ -1,0 +1,34 @@
+//blog
+include ../../mixins/title.pug
+include ../../mixins/button.pug
+.blog
+    .container
+        .row
+            +title("Recent " , "Posts", "LOVE IS THE BEST MEDICINE")
+            .col-lg-4.col-12
+                .blog__info.text-center
+                    img.blog__info-img(src="images/blog_post1.jpg" alt="")
+                    .blog__info-content
+                        span.content-time.f-r JULY 28, 2016
+                        h4.content-title.f-r Ribeye aliquip culpa
+                        hr.content-line 
+                        p.content-text.f-o Est lorem picanha tempor. Eu deserunt kevin nisi t-bone. Ex pork ut pork chop, kielbasa sirloin mollit aliquip beef.
+                        +button("Read more", "blog-detail.html")
+            .col-lg-4.col-12
+                .blog__info.text-center
+                    img.blog__info-img(src="images/blog_post2.jpg" alt="")
+                    .blog__info-content
+                        span.content-time.f-r JULY 19, 2016
+                        h4.content-title.f-r Esse exercitation proident
+                        hr.content-line 
+                        p.content-text.f-o Est lorem picanha tempor. Eu deserunt kevin nisi t-bone. Ex pork ut pork chop, kielbasa sirloin mollit aliquip beef.
+                        +button("Read more", "blog-detail.html")
+            .col-lg-4.col-12
+                .blog__info.text-center
+                    img.blog__info-img(src="images/blog_post3.jpg" alt="")
+                    .blog__info-content
+                        span.content-time.f-r JULY 10, 2016
+                        h4.content-title.f-r In ad proident boudin sunt
+                        hr.content-line 
+                        p.content-text.f-o Est lorem picanha tempor. Eu deserunt kevin nisi t-bone. Ex pork ut pork chop, kielbasa sirloin mollit aliquip beef.
+                        +button("Read more", "blog-detail.html")

@@ -1,0 +1,24 @@
+/* ====== Loader =======*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 13000;
+  height: 100%;
+  &__img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: no-repeat 50% 50% transparent;
+    background-image: url(../images/preloader.gif);
+    margin: -50px 0 0 -50px;
+  }
+  .hide-loader {
+    display: none;
+  }
+}

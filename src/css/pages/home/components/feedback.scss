@@ -1,0 +1,131 @@
+/*========== Feedback ============= */
+.feedback {
+  padding-top: 50px;
+  padding-bottom: 5px;
+  background-image: url(../images/testimonials_bg.jpg);
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  &:after {
+    background-color: #40a6a0;
+    opacity: 0.8;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .up {
+    z-index: 1;
+  }
+  &__title {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1;
+    word-break: break-word;
+    & strong {
+      font-weight: 600;
+    }
+  }
+  &__text {
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: #caeae9;
+  }
+  &__box {
+    padding: 0 100px;
+    margin: 30px 0;
+    @include breakpoint(767) {
+      padding: 0 15px;
+    }
+    & img {
+      margin: 0 auto 33px;
+      max-width: 75px;
+      border-radius: 50%;
+    }
+    &-content {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 30px;
+      font-style: italic;
+      font-weight: 400;
+      color: #fff;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "\f10d";
+        font-family: "Font Awesome\ 5 Pro";
+        font-size: 125px;
+        font-style: normal;
+        color: #40a6a0;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+    &-meta {
+      margin-bottom: 0;
+      font-style: normal;
+      opacity: 1;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 30px;
+      .meta__name {
+        font-size: 18px;
+        margin-bottom: -3px;
+        margin-top: 30px;
+        color: #fff;
+        font-weight: 300;
+        line-height: 1;
+        word-break: break-word;
+        & strong {
+          font-weight: 600;
+        }
+      }
+      .meta__manager {
+        color: #caeae9;
+        margin-bottom: 0;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+  .owl-nav {
+    & span {
+      color: #fff;
+      font-size: 20px;
+    }
+    .owl-prev {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      @include breakpoint(576) {
+        left: -15px;
+      }
+    }
+    .owl-next {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include breakpoint(576) {
+        right: -15px;
+      }
+    }
+    .owl-prev:hover,
+    .owl-next:hover {
+      background: transparent;
+      outline: none;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+/*========= Banner ==========*/
+.banner {
+  color: #787878;
+  &__content {
+    &-box {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      padding-top: 168px;
+      padding-bottom: 168px;
+      @include breakpoint(1024) {
+        padding-top: 100px;
+        padding-bottom: 120px;
+      }
+      @include breakpoint(768) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      &.background-1 {
+        background-image: url(../images/slide01.jpg);
+      }
+      &.background-2 {
+        background-image: url(../images/slide02.jpg);
+      }
+      &.background-3 {
+        background-image: url(../images/slide03.jpg);
+      }
+
+      .box-title {
+        color: #3c3c3c;
+        -webkit-animation-name: fadeInLeft;
+        -moz-animation-name: fadeInLeft;
+        -o-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        -ms-animation-duration: 3s;
+        -o-animation-duration: 3s;
+        animation-duration: 3s;
+        visibility: visible;
+        & p {
+          font-size: 50px;
+          line-height: 1;
+          margin-bottom: 0;
+          font-weight: 300;
+          border-color: #3c3c3c;
+          @include min-breakpoint(1200) {
+            font-size: 60px;
+          }
+          @include breakpoint(991) {
+            font-size: 40px;
+          }
+          @include breakpoint(768) {
+            font-size: 30px;
+          }
+          @include breakpoint(575) {
+            display: none;
+          }
+        }
+        .p-mobile {
+          display: none;
+          font-size: 16px;
+          @include breakpoint(425) {
+            display: block;
+          }
+        }
+      }
+      .box-text {
+        margin-top: 25px;
+        -webkit-animation-name: fadeInRight;
+        -moz-animation-name: fadeInRight;
+        -o-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        -ms-animation-duration: 3s;
+        -o-animation-duration: 3s;
+        animation-duration: 3s;
+        @include breakpoint(768) {
+          margin-top: 12px;
+        }
+        p {
+          @include min-breakpoint(1200) {
+            max-width: 70%;
+            display: inline-block;
+          }
+          @include breakpoint(991) {
+            font-size: 15px;
+          }
+          @include breakpoint(768) {
+            font-size: 10px;
+          }
+          @include breakpoint(575) {
+            display: none;
+          }
+          margin-bottom: 0;
+          font-size: 18px;
+          color: #787878;
+        }
+      }
+    }
+  }
+  &button:focus {
+    outline: none;
+  }
+  .owl-dots {
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    z-index: 10;
+    @include breakpoint(1024) {
+      bottom: 50px;
+    }
+    @include breakpoint(768) {
+      bottom: 10px;
+    }
+  }
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    border: 1px #fff solid;
+    background: transparent;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

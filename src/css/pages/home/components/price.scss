@@ -1,0 +1,110 @@
+/* ========== Price ============*/
+.price {
+  padding-top: 100px;
+  padding-bottom: 110px;
+  @include breakpoint(991) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+  .mt-10 {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__box {
+    border: 2px solid rgba(60, 60, 60, 0.08);
+    margin-top: 30px;
+    margin-bottom: 0;
+    &-title {
+      margin: -2px -2px 0;
+      background-color: #80ceca;
+      padding: 35px 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      position: relative;
+      color: #ffffff;
+      overflow: hidden;
+      .overlay {
+        background-color: rgba(64, 166, 160, 0.85);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1000px;
+      }
+      .title-text {
+        font-size: 28px;
+        margin: 0;
+        color: #fff;
+        font-weight: 300;
+        line-height: 1;
+        word-break: break-word;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        & strong {
+          font-weight: 600;
+        }
+      }
+      &.teaser01 {
+        background-image: url(../images/teaser01.jpg);
+      }
+      &.teaser02 {
+        background-image: url(../images/teaser02.jpg);
+      }
+      &.teaser03 {
+        background-image: url(../images/teaser03.jpg);
+      }
+    }
+    &-tag {
+      padding: 45px 0 0;
+      color: #b4b4b4;
+      font-weight: 300;
+      & span:first-child {
+        font-size: 40px;
+      }
+      .tag-last {
+        font-size: 60px;
+        line-height: 60px;
+        margin-right: 10px;
+      }
+      .tag-text {
+        font-size: 13px;
+        margin-top: -10px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 32px;
+      }
+    }
+    .hightlight {
+      color: #80ceca;
+    }
+    &-item {
+      & li {
+        max-width: 210px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        font-weight: 600;
+        color: #3c3c3c;
+        font-size: 16px;
+        line-height: 32px;
+      }
+      .line {
+        border-top: 1px solid rgba(60, 60, 60, 0.08);
+      }
+    }
+    &-button {
+      padding: 20px 40px 35px;
+    }
+  }
+  .title__content-line {
+    margin: 35px auto 30px;
+  }
+}

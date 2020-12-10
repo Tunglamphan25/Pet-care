@@ -1,0 +1,60 @@
+/* ========= Team ======== */
+.team {
+  padding-top: 100px;
+  padding-bottom: 75px;
+  &__img {
+    & img {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &__caption {
+    padding: 16px 20px 26px;
+    &-name {
+      font-size: 20px;
+      margin-bottom: 2px;
+      color: #3c3c3c;
+      margin-top: 0;
+      font-weight: 300;
+      line-height: 1;
+      word-break: break-word;
+      &:hover {
+        color: #80ceca;
+      }
+    }
+    &-work {
+      color: #80ceca;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    &-social {
+      & a {
+        color: #787878;
+        font-size: 15px;
+      }
+      .fa-facebook-f {
+        &:hover {
+          color: #507cbe;
+          border-color: #507cbe;
+        }
+      }
+      .fa-twitter {
+        &:hover {
+          color: #00abef;
+          border-color: #00abef;
+        }
+      }
+
+      .fa-youtube {
+        &:hover {
+          color: #f72e2e;
+          border-color: #f72e2e;
+        }
+      }
+      .ml-15 {
+        margin-left: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+/* ========= Porfolio ============*/
+.portfolio {
+  background-color: #f0f0f0;
+  .mt-20 {
+    margin-top: 20px;
+  }
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  &__title {
+    .active {
+      color: #80ceca;
+    }
+    & a {
+      font-weight: 600;
+      font-size: 13px;
+      padding: 9px 17px;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #787878;
+      &:hover {
+        color: #80ceca;
+      }
+    }
+    #active {
+      color: #80ceca;
+    }
+  }
+  &__filters {
+    height: 474.312px;
+  }
+  .grid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .grid-item {
+      width: 25%;
+      padding-left: 0;
+      padding-right: 0;
+      @include breakpoint(1199) {
+        width: 33.33333%;
+      }
+      @include breakpoint(768) {
+        width: 50%;
+      }
+      @include breakpoint(575) {
+        width: 100%;
+      }
+      &:hover .box-content {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+      .box-media {
+        position: relative;
+      }
+      .box-content {
+        position: absolute;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 15px;
+        top: 20px;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background-color: rgba(64, 166, 160, 0.9);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        .box-title {
+          & a {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1;
+            word-break: break-word;
+          }
+        }
+        .box-line {
+          max-width: 170px;
+          background: #fff;
+          margin-bottom: 15px;
+          margin-top: 6px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .box-text {
+          font-size: 16px;
+          font-weight: 300;
+          color: #fff;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/* ========== About =========== */
+.about-collapse {
+  a.collapsed:after {
+    content: "Read More";
+  }
+  a:not(.collapsed):after {
+    content: "Show Less";
+  }
+  #collapseAbout.collapse:not(.show) {
+    display: block;
+    height: 4.5em;
+    overflow: hidden;
+  }
+  #collapseAbout.collapsing {
+    height: 4.5em;
+  }
+}

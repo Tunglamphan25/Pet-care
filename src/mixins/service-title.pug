@@ -1,0 +1,9 @@
+mixin service-title(img, text, strong, content)
+    .service__info.d-flex
+        .service__info-img
+            img(src= img alt="")
+        .service__info-body
+            h4.f-r
+                a(href="service-detail.html").body-title= text 
+                    strong= strong
+            p.body-text.f-r= content

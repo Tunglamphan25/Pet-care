@@ -1,0 +1,65 @@
+/*========== Wellness Care ========*/
+.service-detail {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  &__img {
+    & img {
+      margin: 5px 30px 20px 0;
+    }
+  }
+  .service__info {
+    margin-top: 0;
+    margin-bottom: 30px;
+    @include breakpoint(1024) {
+      margin-bottom: 10px;
+    }
+    @include breakpoint(768) {
+      margin-top: 20px;
+    }
+    &-img {
+      width: 80px;
+    }
+  }
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  .mb-0 {
+    margin-bottom: 0;
+  }
+  .mb-10 {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  &__text {
+    color: #787878;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+    @include breakpoint(991) {
+      font-size: 17px;
+    }
+  }
+  &__list {
+    padding-left: 28px;
+    margin-bottom: 20px;
+    &-item {
+      position: relative;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 32px;
+      color: #3c3c3c;
+      &::before {
+        font-family: "Font Awesome\ 5 Pro";
+        font-size: 14px;
+        color: #80ceca;
+        content: "\f0da";
+        position: absolute;
+        left: -28px;
+        top: 0;
+      }
+    }
+  }
+  & h4 {
+    font-size: 28px;
+  }
+}

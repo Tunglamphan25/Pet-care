@@ -1,0 +1,114 @@
+/* ========== TopBar ============*/
+.topbar {
+  background-color: #ffffff;
+  color: #787878;
+  padding: 15px 0;
+  &__info {
+    @include breakpoint(991) {
+      flex-wrap: wrap;
+    }
+
+    &-nav {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      @include breakpoint(768) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include breakpoint(576) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      @include breakpoint(375) {
+        flex-direction: column;
+      }
+      .nav-line {
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: -23px;
+          content: "";
+          width: 1px;
+          height: 10px;
+          margin-top: -5px;
+          background-color: rgba(60, 60, 60, 0.08);
+        }
+      }
+      .nav-item {
+        margin: 5px 20px;
+        vertical-align: middle;
+        position: relative;
+        align-items: center;
+        @include breakpoint(991) {
+          margin: 5px 10px;
+        }
+        @include breakpoint(576) {
+          margin: 7px 20px;
+        }
+        @include breakpoint(475) {
+          margin: 15px 20px;
+        }
+        &__icon {
+          font-size: 20px;
+          display: table-cell;
+          padding-right: 10px;
+        }
+        &__title {
+          width: auto;
+          line-height: 1;
+          .text {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #b4b4b4;
+          }
+          .content {
+            letter-spacing: -0.025em;
+            color: #80ceca;
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+.topbar__info-logo {
+  @include breakpoint(991) {
+    text-align: center;
+    margin: auto;
+  }
+  .logo__link {
+    word-break: break-word;
+    padding: 10px 0;
+    .logo-svg {
+      fill: #80ceca;
+    }
+    .logo__text {
+      line-height: 1.2;
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 16px;
+      .logo-big {
+        display: block;
+        font-size: 28px;
+        margin: 0 0 -2px -2px;
+        letter-spacing: -0.025em;
+        color: #3c3c3c;
+        border-color: #3c3c3c;
+        font-weight: 300;
+        & strong {
+          font-weight: 600;
+        }
+      }
+      .logo-small {
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #b4b4b4;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+/* ============ Teaser ===========*/
+.teaser {
+  background-image: url(../images/progress.jpg);
+  background-color: #80ceca;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  padding: 40px 30px;
+  position: relative;
+  &:after {
+    background-color: #40a6a0;
+    opacity: 0.8;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    &-icon {
+      margin-bottom: 40px;
+      width: 50px;
+      margin: auto;
+      & img {
+        filter: invert(1);
+      }
+    }
+    &-number {
+      font-size: 40px;
+      margin: 17px 0 6px;
+      color: #fff;
+    }
+    &-text {
+      margin: 10px 0 0;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+      @include min-breakpoint(1200) {
+        white-space: nowrap;
+      }
+      @include breakpoint(991) {
+        white-space: nowrap;
+      }
+      @include breakpoint(768) {
+        font-size: 24px;
+      }
+    }
+    &.line {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 80px;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        @include breakpoint(767) {
+          position: relative;
+          display: block;
+          height: 1px;
+          width: 90px;
+          margin: 15px auto;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    }
+    &.line-none {
+      @include breakpoint(991) {
+        &::before {
+          content: unset;
+        }
+      }
+      @include breakpoint(767) {
+        &::before {
+          content: "";
+        }
+      }
+    }
+  }
+}

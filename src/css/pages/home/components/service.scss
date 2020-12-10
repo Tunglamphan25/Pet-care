@@ -1,0 +1,9 @@
+/* ========= Service ==========*/
+.service {
+  padding-top: 110px;
+  padding-bottom: 85px;
+  @include breakpoint(991) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
